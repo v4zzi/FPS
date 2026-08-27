@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -29,7 +30,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         isPlaying = true;
-        gameTime = 18;
+        gameTime = 40;
     }
 
     // Update is called once per frame
@@ -46,6 +47,11 @@ public class GameManager : MonoBehaviour
                 isPlaying = false;
             }
         }
+    }
+
+    public void ReloadLevel()
+    {
+        SceneManager.LoadScene(0);
     }
 
 }
